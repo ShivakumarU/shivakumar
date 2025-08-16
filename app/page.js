@@ -129,7 +129,7 @@ export default function Home() {
               </a>
               <Link
                 href="#contact"
-                className=" w-fit flex items-center justify-center gap-2 outline text-orange-100 md:px-6 md:py-3 rounded-lg font-medium hover:bg-orange-100 hover:text-gray-700 transition-colors duration-200 px-3 py-2"
+                className=" w-fit flex items-center justify-center gap-2 bg-gradient-to-r to-orange-800 via-pink-700 from-purple-900 text-orange-100 md:px-6 md:py-3 rounded-lg font-medium  hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 hover:text-gray-100 transition-colors duration-200 px-3 py-2"
               >
                 Get In Touch <FaLocationArrow className="text-xl leftRight" />
               </Link>
