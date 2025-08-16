@@ -11,7 +11,6 @@ export default function Navbar() {
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Resume/CV', href: '#resume'},
     { name: 'Contact Me', href: '#contact' },
   ];
 
@@ -19,10 +18,9 @@ export default function Navbar() {
     <nav className="bg-gray-900 fixed w-full top-0 z-50 border-b-[0.1px] border-gray-500 shadow-[0px_1px_10px_rgba(255,255,255,0.4)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-orange-200">
+              <span className="md:text-2xl text-md font-bold text-orange-200">
               🔱 Shiva
                 <span className="text-orange-500 ml-2" >
                   .
@@ -33,7 +31,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <Link
@@ -54,7 +52,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-green-600 focus:outline-none focus:text-green-600"
+              className="text-gray-300 hover:text-orange-600 focus:outline-none focus:text-gray-300"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -70,12 +68,12 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 text-9xl shadow-lg text-center">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  className="text-orange-100 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 border-b-[0.1px]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

@@ -1,10 +1,14 @@
 "use client"
 import Navbar from './components/Navbar';
 import { useState, useEffect } from 'react';
-import { Roboto, Playfair_Display, Pacifico, Edu_NSW_ACT_Foundation, Barlow_Condensed } from 'next/font/google';
+import { Roboto, Playfair_Display, Pacifico, Edu_NSW_ACT_Foundation, Barlow_Condensed, Nunito, Rubik } from 'next/font/google';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaReact, FaNodeJs, FaJava, FaDocker, FaGitAlt, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaReact, FaNodeJs, FaJava, FaDocker, FaGitAlt, FaExternalLinkAlt, FaDownload } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGooglecloud, SiHtml5, SiCss3, SiTailwindcss, SiRedux, SiShell, SiFigma } from "react-icons/si";
+import { MdFileDownload } from "react-icons/md";
+import { FaLocationArrow } from "react-icons/fa6";
+import Link from 'next/link';
+
 
 
 export const roboto = Roboto({ subsets: ['latin'], weight: ['500'] })
@@ -18,12 +22,20 @@ export const barlowCondensed = Barlow_Condensed({
   weight: ['500'],
   subsets: ['latin'],
 });
+export const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], 
+});
+
+export const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function Home() {
   const phrases = [
     { article: "a", role: "Full Stack Developer" },
     { article: "a", role: "Software Engineer" },
-    { article: "a", role: "Freelancer" },
     { article: "an", role: "Artist . . ." },
   ];
 
@@ -54,28 +66,28 @@ export default function Home() {
   }, [subIndex, isDeleting, index]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+    <div className="min-h-screen bg-gray-900 transition-colors duration-200">
       <Navbar />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="w-40 h-80 mx-auto mb-6 rounded-4xl overflow-hidden border-0 border-green-400 shadow-lg">
+            <div className="w-40 h-70 mx-auto mb-6 md:mb-8 rounded-4xl overflow-hidden border-0 border-orange-400 shadow-lg">
               <Image
                 src="/Pasted_image.png" 
                 alt="ShivaKumar Ummeda"
                 width={160}
                 height={160}
-                className="object-cover"
+                className="object-cover mt-[-25px]"
                 priority
               />
             </div>
-            <h1 className={`text-6xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 ${roboto.className}`}>
-              Hie <span className='wave-hand'>👋</span>, I&apos;m <span className={`text-green-400 ${playfair.className}`}>ShivaKumar Ummeda</span>
+            <h1 className={`text-xl md:text-5xl sm:text-2xl font-bold text-orange-100 md:mb-6 mb-2 ${nunito.className}`}>
+              Hie <span className='wave-hand'>👋</span>, I&apos;m <span className={`text-2xl md:text-5xl sm:text-2xl gradient-flex ${nunito.className}`}>ShivaKumar Ummeda</span>
             </h1>
             <p
-              className={`text-3xl md:text-3xl text-gray-600 dark:text-orange-100 mb-8 ${barlowCondensed.className}`}
+              className={`text-lg md:text-3xl text-orange-100 md:mb-8 mb-3 ${barlowCondensed.className}`}
             >
               <span className="text-orange-400">
                 {phrases[index].article}&nbsp;
@@ -83,27 +95,44 @@ export default function Home() {
               {phrases[index].role.substring(0, subIndex)}
               <span className="animate-pulse">|</span>
             </p>
-            <p className={`text-lg text-gray-500 dark:text-gray-400 max-w-3xl mx-auto ${eduHand.className}`}>
+            <p className={`text-sm md:text-lg text-gray-400 max-w-3xl mx-auto ${eduHand.className}`}>
               Passionate about creating innovative web solutions and turning ideas into reality through code.
             </p>
-            <div className="mt-8 flex justify-center space-x-6 text-2xl">
-              <a href="https://github.com/ShivakumarU" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+            <div className="mt-4 md:mt-8 flex justify-center space-x-6 text-md md:text-2xl">
+              <a href="https://github.com/ShivakumarU" title='GitHub' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/shivakumarummeda29/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+              <a href="https://www.linkedin.com/in/shivakumarummeda29/" title='LinkedIn' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12">
                 <FaLinkedin />
               </a>
-              <a href="https://www.instagram.com/trendie_calligraphie/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+              <a href="https://www.instagram.com/trendie_calligraphie/" title='Instagram' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12">
                 <FaInstagram />
               </a>
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=ummedashivakumar@gmail.com&su=Hello%20ShivaKumar&body=Hi%20ShivaKumar,"
-                target="_blank"
+                target="_blank" title='Email'
                 rel="noopener noreferrer"
-                className="hover:text-orange-400"
+                className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12"
               >
                 <FaEnvelope />
               </a>  
+            </div>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="/Shivakumar_Ummeda_SoftwareEngineer_Resume_2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="Shivakumar_Ummeda_Resume.pdf"
+                className="w-fit flex items-center justify-center gap-2 bg-gradient-to-r from-orange-800 via-pink-700 to-purple-900 text-orange-50 hover:text-white hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 md:px-6 md:py-3 px-3 py-2 rounded-lg font-medium transition-colors duration-200"
+              >
+                Download Resume <MdFileDownload className="text-xl upDown" />
+              </a>
+              <Link
+                href="#contact"
+                className=" w-fit flex items-center justify-center gap-2 outline text-orange-100 md:px-6 md:py-3 rounded-lg font-medium hover:bg-orange-100 hover:text-gray-700 transition-colors duration-200 px-3 py-2"
+              >
+                Get In Touch <FaLocationArrow className="text-xl leftRight" />
+              </Link>
             </div>
           </div>
         </div>
@@ -271,39 +300,6 @@ export default function Home() {
   </div>
 </section>
 
-      {/* Resume/CV Section */}
-      <section id="resume" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Resume/CV</h2>
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-8 mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">ShivaKumar Ummeda</h3>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">Full Stack Developer & Software Engineer</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/Shivakumar_Ummeda_SoftwareEngineer_Resume_2025.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors duration-200"
-                >
-                  Download PDF
-                </a>
-                <a
-                  href="/Shivakumar_Ummeda_SoftwareEngineer_Resume_2025.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
-                >
-                  View Online
-                </a>
-              </div>
-            </div>
-            <p className="text-gray-600 dark:text-gray-300">
-              Click the buttons above to download or view my resume in PDF format.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">

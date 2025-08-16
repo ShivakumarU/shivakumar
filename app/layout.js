@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./context/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Shiva - Portfolio",
+  title: "Shiva | Portfolio",
   description: "Shiva's personal portfolio website showcasing skills, experience, and projects",
 };
 
@@ -24,9 +23,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <ThemeProvider>
           {children}
-        </ThemeProvider>
       </body>
     </html>
   );

@@ -45,3 +45,33 @@ body {
   transform-origin: 70% 70%;
   animation: wave 2s infinite;
 }
+
+@keyframes upDown {
+  0%, 100% { transform: translateY(2px); }
+  50% { transform: translateY(-4px); }
+}
+
+/* ⬅️➡️ Left & Right */
+@keyframes leftRight {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(7px); }
+  100% {transform: translateX(0);}
+}
+
+/* Utility classes */
+.upDown {
+  animation: upDown 1.2s ease-in-out infinite;
+}
+
+.leftRight {
+  animation: leftRight 2s ease-in-out infinite;
+}
+
+.gradient-flex {
+  background: linear-gradient(to right,  rgb(252, 138, 8), #fae20f, rgb(252, 138, 8)); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
