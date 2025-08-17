@@ -122,7 +122,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Shivakumar_Ummeda_Resume.pdf"
-                className="w-fit flex items-center justify-center gap-2 bg-gradient-to-r from-orange-800 via-pink-700 to-purple-900 text-orange-50 hover:text-white hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 md:px-4.5 md:py-2.5 px-3 py-1.5 rounded-lg md:font-medium transition-colors duration-200 md:text-lg text-sm"
+                className="w-fit flex items-center justify-center gap-2 bg-gradient-to-r from-orange-700 via-pink-700 to-purple-900 text-orange-50 hover:text-white hover:from-purple-900 hover:to-orange-700 hover:via-pink-700 md:px-4.5 md:py-2.5 px-3 py-1.5 rounded-lg md:font-medium transition-colors duration-200 md:text-lg text-sm"
               >
                 Download Resume <MdFileDownload className="md:text-lg text-sm upDown" />
               </a>

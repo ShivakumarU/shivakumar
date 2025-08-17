@@ -22,9 +22,9 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               <span className="md:text-2xl text-md font-bold text-orange-200">
               🔱 Shiva
-                <span className="text-pink-400 ml-2" >
+                <span className="text-red-500 ml-2" >
                   .
-                </span>
+                </span> 
 
               </span>
             </Link>
