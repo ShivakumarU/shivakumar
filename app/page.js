@@ -8,6 +8,7 @@ import { SiJavascript, SiTypescript, SiNextdotjs, SiExpress, SiMongodb, SiPostgr
 import { MdFileDownload } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa6";
 import Link from 'next/link';
+import ResumeModal from "./components/ResumeModal";
 
 
 
@@ -126,15 +127,7 @@ export default function Home() {
               </a>  
             </div>
             <div className="md:mt-8 mt-6 flex flex-col sm:flex-row md:gap-4 gap-3 justify-center items-center">
-              <a
-                href="/Shivakumar_Ummeda_SoftwareEngineer_Resume_2025.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                download="Shivakumar_Ummeda_Resume.pdf"
-                className="w-fit flex items-center justify-center gap-2 bg-gradient-to-r from-orange-700 via-pink-700 to-purple-900 text-orange-50 hover:text-white hover:from-purple-900 hover:to-orange-700 hover:via-pink-700 md:px-4.5 md:py-2.5 px-3 py-1.5 rounded-lg md:font-medium transition-colors duration-200 md:text-lg text-sm"
-              >
-                Download Resume <MdFileDownload className="md:text-lg text-sm upDown" />
-              </a>
+              <ResumeModal />
               <Link
                 href="#contact"
                 className=" w-fit flex items-center justify-center gap-2 bg-gradient-to-r to-orange-800 via-pink-700 from-purple-900 text-orange-100 md:px-4.5 md:py-2.5 rounded-lg md:font-medium  hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 hover:text-gray-100 transition-colors duration-200 px-4 py-1.5 md:text-lg text-sm"
