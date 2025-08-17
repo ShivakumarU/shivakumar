@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-900 fixed w-full top-0 z-50 border-b-[0.1px] border-gray-500 shadow-[0px_1px_10px_rgba(255,255,255,0.4)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center md:h-16 h-12">
+        <div className="flex justify-between items-center md:h-16 h-14">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <span className="md:text-2xl text-md font-bold text-orange-200">

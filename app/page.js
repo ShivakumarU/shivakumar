@@ -82,11 +82,11 @@ export default function Home() {
                 priority
               />
             </div>
-            <h1 className={`text-xl md:text-5xl sm:text-2xl font-bold text-orange-100 md:mb-6 mb-2 ${nunito.className}`}>
+            <h1 className={`text-xl md:text-5xl sm:text-2xl font-bold text-orange-100 md:mb-6 mb-3 ${nunito.className}`}>
               Hie <span className='wave-hand'>👋</span>, I&apos;m <span className={`text-2xl md:text-5xl sm:text-2xl gradient-flex ${nunito.className}`}>ShivaKumar Ummeda</span>
             </h1>
             <p
-              className={`text-lg md:text-3xl text-orange-100 md:mb-8 mb-3 ${barlowCondensed.className}`}
+              className={`text-lg md:text-3xl text-orange-100 md:mb-8 mb-4 ${barlowCondensed.className}`}
             >
               <span className="text-orange-400">
                 {phrases[index].article}&nbsp;
@@ -97,7 +97,7 @@ export default function Home() {
             <p className={`text-sm md:text-lg text-gray-400 max-w-3xl mx-auto ${eduHand.className}`}>
               Passionate about creating innovative web solutions and turning ideas into reality through code.
             </p>
-            <div className="mt-4 md:mt-8 flex justify-center space-x-6 text-md md:text-2xl">
+            <div className="mt-6 md:mt-8 flex justify-center space-x-6 text-md md:text-2xl">
               <a href="https://github.com/ShivakumarU" title='GitHub' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100">
                 <FaGithub />
               </a>
@@ -116,7 +116,7 @@ export default function Home() {
                 <FaEnvelope />
               </a>  
             </div>
-            <div className="md:mt-8 mt-4 flex flex-col sm:flex-row md:gap-4 gap-2.5 justify-center items-center">
+            <div className="md:mt-8 mt-6 flex flex-col sm:flex-row md:gap-4 gap-3 justify-center items-center">
               <a
                 href="/Shivakumar_Ummeda_SoftwareEngineer_Resume_2025.pdf"
                 target="_blank"
