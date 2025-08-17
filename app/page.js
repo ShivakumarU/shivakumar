@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import { useState, useEffect } from 'react';
 import { Roboto, Playfair_Display, Pacifico, Edu_NSW_ACT_Foundation, Barlow_Condensed, Nunito, Rubik } from 'next/font/google';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaReact, FaNodeJs, FaJava, FaDocker, FaGitAlt, FaExternalLinkAlt, FaDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaReact, FaNodeJs, FaJava, FaDocker, FaGitAlt, FaExternalLinkAlt, } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGooglecloud, SiHtml5, SiCss3, SiTailwindcss, SiRedux, SiShell, SiFigma } from "react-icons/si";
 import { MdFileDownload } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -42,6 +42,7 @@ export default function Home() {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const currentPhrase = phrases[index].role;
@@ -69,10 +70,18 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center md:bg-gradient-to-br from-gray-900 md:via-gray-800 to-black via-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="home" className="min-h-screen flex flex-col items-center justify-center md:bg-gradient-to-br from-gray-900 md:via-gray-800 to-black via-gray-900 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="w-24 h-40 md:w-40 md:h-70 mx-auto mb-5 md:mb-8 rounded-4xl overflow-hidden">
+            {isVisible && (<div className={`${nunito.className} bg-amber-900 text-center flex items-center justify-between rounded-2xl md:w-49 md:text-sm px-2 absolute md:left-15 md:top-40 text-[8px] top-29 left-35`}>
+               <span> Welcome to My Portfolio 🙏</span>
+               <button
+                  onClick={() => setIsVisible(false)}
+                  className="absolute md:top-[-22px] top-[-14px] right-0 mt-1 mr-1 text-orange-200 font-bold hover:text-gray-200 cursor-pointer"
+                >
+                  ✕
+                </button>
+            </div>)}
+            <div className="w-24 h-40 md:w-40 md:h-70 mx-auto mb-5 md:mb-8 mt-4 rounded-4xl overflow-hidden">
               <Image
                 src="/Pasted_image.png" 
                 alt="ShivaKumar Ummeda"
@@ -134,7 +143,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </div>
       </section>
 
       {/* About Section */}
