@@ -9,6 +9,7 @@ import { MdFileDownload } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa6";
 import Link from 'next/link';
 import ResumeModal from "./components/ResumeModal";
+import Skills from './components/Skills';
 
 
 
@@ -71,7 +72,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex flex-col items-center justify-center md:bg-gradient-to-br from-gray-900 md:via-gray-800 to-black via-gray-900 px-4 sm:px-6 lg:px-8">
+      <section id="home" className="min-h-screen flex flex-col items-center justify-center md:bg-gradient-to-br from-gray-900 to-black via-gray-900 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             {isVisible && (<div className={`${nunito.className} bg-amber-900 text-center flex items-center justify-between rounded-2xl md:w-49 md:text-sm px-2 absolute md:left-15 md:top-40 text-[8px] top-29 left-35`}>
                <span> Welcome to My Portfolio 🙏</span>
@@ -138,90 +139,8 @@ export default function Home() {
           </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">About Me</h2>
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              I&apos;m a dedicated software developer with a passion for building scalable web applications. 
-              With expertise in modern web technologies, I love solving complex problems and creating 
-              user-friendly experiences that make a difference.
-            </p>
-            <p>
-            I specialize in JavaScript, TypeScript, React, Next.js, Node.js, with a strong foundation in Tailwind CSS and REST API development.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Experience</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Software Engineer</h3>
-              <p className="text-green-600 dark:text-green-400 mb-2">tech.at.core • Mar 2023 - Mar 2025</p>
-              <p className="text-gray-600 dark:text-gray-300">
-              Developed and supported supply chain platforms at BMG Rights Management, enhancing workflows for media ingestion, metadata processing,
-              and asset validation across five integrated applications. Designed and integrated secure RESTful APIs, and implemented third-party service integrations to extend application capabilities.
-              Created and maintained reusable UI components to promote code reusability, UI consistency, and developer efficiency.
-              </p>
-            </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Software Engineer Intern</h3>
-              <p className="text-green-600 dark:text-green-400 mb-2">tech.at.core • Nov 2022 - Feb 2023</p>
-              <p className="text-gray-600 dark:text-gray-300">
-              Assisted in building web applications using React, TypeScript, and Styled Components as part of an agile frontend team. Built and maintained web applications, working with various technologies and frameworks. Supported the integration of RESTful APIs and backend services using Node.js and Express, enhancing application functionality.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Skills Section */}
-      <section id="skills" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-800">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-      Skills
-    </h2>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-      {[
-        { name: 'React.js', icon: <FaReact className="text-blue-500" /> },
-        { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
-        { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" /> },
-        { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },
-        { name: 'Java', icon: <FaJava className="text-red-500" /> },
-        { name: 'Next.js', icon: <SiNextdotjs className="text-gray-900 dark:text-white" /> },
-        { name: 'Express.js', icon: <SiExpress className="text-gray-700 dark:text-white" /> },
-        { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
-        { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" /> },
-        { name: 'GCP', icon: <SiGooglecloud className="text-yellow-500" /> },
-        { name: 'Docker', icon: <FaDocker className="text-blue-400" /> },
-        { name: 'Git', icon: <FaGitAlt className="text-orange-500" /> },
-        { name: 'GitHub', icon: <FaGithub className="text-gray-800 dark:text-white" /> },
-        { name: 'REST APIs', icon: <SiExpress className="text-teal-500" /> },
-        { name: 'HTML5', icon: <SiHtml5 className="text-orange-600" /> },
-        { name: 'CSS', icon: <SiCss3 className="text-blue-500" /> },
-        { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
-        { name: 'Redux', icon: <SiRedux className="text-purple-500" /> },
-        { name: 'Shell Scripting', icon: <SiShell className="text-gray-600 dark:text-white" /> },
-        { name: 'Figma', icon: <SiFigma className="text-pink-500" /> },
-      ].map((skill) => (
-        <div
-          key={skill.name}
-          className="flex items-center space-x-2 bg-gray-50 dark:bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-colors duration-200 shadow-[1px_1px_1px_rgba(255,255,255,0.4)]"
-        >
-          {skill.icon}
-          <span className="text-gray-900 dark:text-white font-medium">
-            {skill.name}
-          </span>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+    <Skills />
 
 {/* Projects Section */}
 <section
@@ -247,7 +166,7 @@ export default function Home() {
           description:
             'A task and case management tool designed for insurance investigation teams. Supports case tracking, and real-time collaboration to streamline investigative workflows.',
           tech: 'React.js, JavaScript, MongoDB, Express.js, TailwindCSS',
-          link: 'https://insurance-fe-gilt.vercel.app/home',
+          link: 'https://tejaswisolutions.vercel.app/home',
           codeLink: 'https://www.github.com/ShivakumarU'
         },
         {
