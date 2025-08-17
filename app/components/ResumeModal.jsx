@@ -29,17 +29,17 @@ export default function ResumeModal() {
         <div className="fixed inset-0 flex items-center justify-center bg-transparent backdrop-blur-sm z-50">
           <div className="bg-gray-700 border-2 border-amber-500 rounded-lg p-6 w-80 text-center">
             <h2 className="text-lg font-bold mb-2 text-orange-200">Download My Resume</h2>
-            <p className="mb-4 ">File: <strong className="gradient-flex">{fileName}</strong></p>
+            <p className="mb-4 ">File: <strong className="md:gradient-flex">{fileName}</strong></p>
             <div className="flex justify-center gap-4">
               <button
                 onClick={triggerDownload}
-                className="bg-amber-500 text-gray-700 px-4 py-2 rounded-lg hover:bg-amber-600 transition-colors duration-200"
+                className="bg-amber-700 px-4 py-2 rounded-lg hover:bg-amber-600 transition-colors duration-200"
               >
                 Download
               </button>
               <button
                 onClick={() => setShowModal(false)}
-                className="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-400 transition-colors duration-200"
+                className="bg-orange-100 text-black px-4 py-2 rounded-lg hover:bg-orange-200 transition-colors duration-200"
               >
                 Cancel
               </button>
