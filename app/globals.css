@@ -76,11 +76,3 @@ body {
   gap: 8px;
 }
 
-.gradient-flex-one {
-  background: linear-gradient(to right,  rgb(252, 138, 8),rgb(252, 138, 8), rgb(252, 138, 8)); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}

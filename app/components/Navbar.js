@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-900 fixed w-full top-0 z-50 border-b-[0.1px] border-gray-500 shadow-[0px_1px_10px_rgba(255,255,255,0.4)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center md:h-16 h-12">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <span className="md:text-2xl text-md font-bold text-orange-200">
@@ -68,12 +68,12 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 text-9xl shadow-lg text-center">
+            <div className="px-2 pt-1 pb-1 space-y-1 sm:px-3 bg-gray-800 shadow-lg text-center">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-orange-100 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 border-b-[0.1px]"
+                  className="text-orange-100 hover:text-green-600 block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 border-b-[0.1px]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

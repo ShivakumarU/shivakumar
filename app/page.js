@@ -47,7 +47,6 @@ export default function Home() {
     const currentPhrase = phrases[index].role;
 
     if (!isDeleting && subIndex === currentPhrase.length) {
-      // Pause before deleting
       setTimeout(() => setIsDeleting(true), 1000);
       return;
     }
@@ -60,7 +59,7 @@ export default function Home() {
 
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + (isDeleting ? -1 : 1));
-    }, isDeleting ? 50 : 100); // typing speed
+    }, isDeleting ? 50 : 100); 
 
     return () => clearTimeout(timeout);
   }, [subIndex, isDeleting, index]);
@@ -70,16 +69,16 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+      <section id="home" className="min-h-screen flex items-center justify-center md:bg-gradient-to-br from-gray-900 md:via-gray-800 to-black via-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="w-40 h-70 mx-auto mb-6 md:mb-8 rounded-4xl overflow-hidden border-0 border-orange-400 shadow-lg">
+            <div className="w-24 h-40 md:w-40 md:h-70 mx-auto mb-5 md:mb-8 rounded-4xl overflow-hidden">
               <Image
                 src="/Pasted_image.png" 
                 alt="ShivaKumar Ummeda"
                 width={160}
                 height={160}
-                className="object-cover mt-[-25px]"
+                className="object-cover md:mt-[-25px] mt-[-15px]"
                 priority
               />
             </div>
@@ -99,39 +98,39 @@ export default function Home() {
               Passionate about creating innovative web solutions and turning ideas into reality through code.
             </p>
             <div className="mt-4 md:mt-8 flex justify-center space-x-6 text-md md:text-2xl">
-              <a href="https://github.com/ShivakumarU" title='GitHub' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12">
+              <a href="https://github.com/ShivakumarU" title='GitHub' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/shivakumarummeda29/" title='LinkedIn' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12">
+              <a href="https://www.linkedin.com/in/shivakumarummeda29/" title='LinkedIn' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100">
                 <FaLinkedin />
               </a>
-              <a href="https://www.instagram.com/trendie_calligraphie/" title='Instagram' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12">
+              <a href="https://www.instagram.com/trendie_calligraphie/" title='Instagram' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100">
                 <FaInstagram />
               </a>
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=ummedashivakumar@gmail.com&su=Hello%20ShivaKumar&body=Hi%20ShivaKumar,"
                 target="_blank" title='Email'
                 rel="noopener noreferrer"
-                className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12"
+                className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100"
               >
                 <FaEnvelope />
               </a>  
             </div>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="md:mt-8 mt-4 flex flex-col sm:flex-row md:gap-4 gap-2.5 justify-center items-center">
               <a
                 href="/Shivakumar_Ummeda_SoftwareEngineer_Resume_2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Shivakumar_Ummeda_Resume.pdf"
-                className="w-fit flex items-center justify-center gap-2 bg-gradient-to-r from-orange-800 via-pink-700 to-purple-900 text-orange-50 hover:text-white hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 md:px-6 md:py-3 px-3 py-2 rounded-lg font-medium transition-colors duration-200"
+                className="w-fit flex items-center justify-center gap-2 bg-gradient-to-r from-orange-800 via-pink-700 to-purple-900 text-orange-50 hover:text-white hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 md:px-4.5 md:py-2.5 px-3 py-1.5 rounded-lg md:font-medium transition-colors duration-200 md:text-lg text-sm"
               >
-                Download Resume <MdFileDownload className="text-xl upDown" />
+                Download Resume <MdFileDownload className="md:text-lg text-sm upDown" />
               </a>
               <Link
                 href="#contact"
-                className=" w-fit flex items-center justify-center gap-2 bg-gradient-to-r to-orange-800 via-pink-700 from-purple-900 text-orange-100 md:px-6 md:py-3 rounded-lg font-medium  hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 hover:text-gray-100 transition-colors duration-200 px-3 py-2"
+                className=" w-fit flex items-center justify-center gap-2 bg-gradient-to-r to-orange-800 via-pink-700 from-purple-900 text-orange-100 md:px-4.5 md:py-2.5 rounded-lg md:font-medium  hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 hover:text-gray-100 transition-colors duration-200 px-4 py-1.5 md:text-lg text-sm"
               >
-                Get In Touch <FaLocationArrow className="text-xl leftRight" />
+                Get In Touch <FaLocationArrow className="md:text-lg text-sm leftRight" />
               </Link>
             </div>
           </div>
