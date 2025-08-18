@@ -95,19 +95,7 @@ export default function Home() {
               />
             </div>
             <h1 className={`text-xl md:text-5xl sm:text-2xl font-bold text-orange-100 md:mb-6 mb-3 ${nunito.className}`}>
-              Hie <span className='wave-hand'>👋</span>, I&apos;m 
-              <span className={`text-2xl md:text-5xl sm:text-2xl gradient-flex ${nunito.className}`}>
-                ShivaKumar Ummeda 
-                <Image
-                src="/india-450_256.gif"
-                alt="Indian Flag"
-                width={32}
-                height={32}
-                title="I'm from India"
-                className="hidden md:block absolute top-32 right-10 w-16 h-auto animate-pulse"
-                />
-
-              </span>
+              Hie <span className='wave-hand'>👋</span>, I&apos;m <span className={`text-2xl md:text-5xl sm:text-2xl gradient-flex ${nunito.className}`}>ShivaKumar Ummeda</span>
             </h1>
             <p
               className={`text-lg md:text-3xl text-orange-100 md:mb-8 mb-4 ${barlowCondensed.className}`}
@@ -150,6 +138,14 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <Image
+                src="/india-450_256.gif"
+                alt="Indian Flag"
+                width={32}
+                height={32}
+                title="I'm from India"
+                className="hidden md:block absolute top-32 right-10 w-16 h-auto animate-pulse"
+                />
       </section>
 
       {/* Skills Section */}

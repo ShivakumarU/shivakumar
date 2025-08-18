@@ -155,15 +155,15 @@ const Contact = () => {
           box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff, 0 0 80px #ff00ff;
         }
       `}</style>
-        <motion.a
+    <motion.a
         href="/"
-        className="absolute bottom-8 right-8 w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-tr from-cyan-400 via-purple-500 to-pink-500 text-white flex items-center justify-center shadow-lg cursor-pointer z-50 animate-pulse"
+        className="hidden md:flex absolute bottom-8 right-8 md:w-14 md:h-14 rounded-full bg-gradient-to-tr from-cyan-400 via-purple-500 to-pink-500 text-white items-center justify-center shadow-lg cursor-pointer z-50 animate-pulse"
         whileHover={{ scale: 1.15 }}
         whileTap={{ scale: 0.95 }}
         title="Back to Home"
         >
         <span className="text-lg md:text-2xl font-bold">⮝</span>
-        </motion.a>
+    </motion.a>
 
     </section>
   );
