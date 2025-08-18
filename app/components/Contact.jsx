@@ -162,7 +162,7 @@ const Contact = () => {
         whileTap={{ scale: 0.95 }}
         title="Back to Home"
         >
-        <span className="text-2xl font-bold">⮝</span>
+        <span className="text-lg md:text-2xl font-bold">⮝</span>
         </motion.a>
 
     </section>
