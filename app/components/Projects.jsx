@@ -79,7 +79,7 @@ export default function Projects() {
               key={index}
               variants={cardVariants}
               whileHover="hover"
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden flex flex-col cursor-pointer transition-transform duration-300"
+              className="bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden flex flex-col cursor-pointer transition-transform duration-300 border-2 border-cyan-400"
             >
               {/* Project Screenshot */}
               <div className="relative w-full h-48 md:h-56 overflow-hidden rounded-t-3xl">
