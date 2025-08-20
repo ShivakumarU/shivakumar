@@ -73,80 +73,115 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex flex-col items-center justify-center bg-gray-900 md:bg-gradient-to-br from-gray-900 to-black via-gray-900 px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {isVisible && (<div className={`${nunito.className} bg-amber-900 text-center flex items-center justify-between rounded-2xl md:w-49 md:text-sm px-2 absolute md:left-15 md:top-40 text-[8px] top-29 left-35`}>
-               <span> Welcome to My Portfolio 🙏</span>
-               <button
-                  onClick={() => setIsVisible(false)}
-                  className="absolute md:top-[-22px] top-[-14px] right-0 mt-1 mr-1 text-orange-200 font-bold hover:text-gray-200 cursor-pointer"
-                >
-                  ✕
-                </button>
-            </div>)}
-            <div className="w-24 h-40 md:w-40 md:h-70 mx-auto mb-5 md:mb-8 mt-4 rounded-4xl overflow-hidden">
-              <Image
-                src="/Pasted_image.png" 
-                alt="ShivaKumar Ummeda"
-                width={160}
-                height={160}
-                className="object-cover md:mt-[-25px] mt-[-15px]"
-                priority
-              />
-            </div>
-            <h1 className={`text-xl md:text-5xl sm:text-2xl font-bold text-orange-100 md:mb-6 mb-3 ${nunito.className}`}>
-              Hie <span className='wave-hand'>👋</span>, I&apos;m <span className={`text-2xl md:text-5xl sm:text-2xl gradient-flex ${nunito.className}`}>ShivaKumar Ummeda</span>
-            </h1>
-            <p
-              className={`text-lg md:text-3xl text-orange-100 md:mb-8 mb-4 ${barlowCondensed.className}`}
-            >
-              <span className="text-orange-400">
-                {phrases[index].article}&nbsp;
-              </span>
-              {phrases[index].role.substring(0, subIndex)}
-              <span className="animate-pulse">|</span>
-            </p>
-            <p className={`text-sm md:text-lg text-gray-400 max-w-3xl mx-auto ${eduHand.className}`}>
-              Passionate about creating innovative web solutions and turning ideas into reality through code.
-            </p>
-            <div className="mt-6 md:mt-8 flex justify-center space-x-6 text-md md:text-2xl">
-              <a href="https://github.com/ShivakumarU" title='GitHub' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100">
-                <FaGithub />
-              </a>
-              <a href="https://www.linkedin.com/in/shivakumarummeda29/" title='LinkedIn' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100">
-                <FaLinkedin />
-              </a>
-              <a href="https://www.instagram.com/trendie_calligraphie/" title='Instagram' target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100">
-                <FaInstagram />
-              </a>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=ummedashivakumar@gmail.com&su=Hello%20ShivaKumar&body=Hi%20ShivaKumar,"
-                target="_blank" title='Email'
-                rel="noopener noreferrer"
-                className="hover:text-orange-400 transform transition duration-300 hover:-translate-y-1 hover:rotate-12 text-amber-100"
+      <section
+        id="home"
+        className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black via-gray-900 px-4 sm:px-6 lg:px-8 relative"
+      >
+          {/* Dismissable Banner */}
+          {isVisible && (
+            <div className="fixed top-20 md:left-1/5 left-1/2 -translate-x-1/2 bg-amber-900 text-orange-100 rounded-xl px-2 text-[9px] sm:text-xs md:text-md flex items-center gap-1 shadow-lg w-fit">
+              <span>🙏 Welcome to My Portfolio</span>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-orange-200 hover:text-gray-200 font-bold ml-2 cursor-pointer"
               >
-                <FaEnvelope />
-              </a>  
+                ✕
+              </button>
             </div>
-            <div className="md:mt-8 mt-6 flex flex-col sm:flex-row md:gap-4 gap-3 justify-center items-center">
-              <ResumeModal />
-              <Link
-                href="#contact"
-                className=" w-fit flex items-center justify-center gap-2 bg-gradient-to-r to-orange-800 via-pink-700 from-purple-900 text-orange-100 md:px-4.5 md:py-2.5 rounded-lg md:font-medium  hover:from-purple-900 hover:to-pink-700 hover:via-purple-900 hover:text-gray-100 transition-colors duration-200 px-4 py-1.5 md:text-lg text-sm"
-              >
-                Get In Touch <FaLocationArrow className="md:text-lg text-sm leftRight" />
-              </Link>
-            </div>
+          )}
+
+          {/* Profile Image */}
+          <div className="w-28 h-40 sm:w-36 sm:h-56 md:w-40 md:h-64 lg:w-44 lg:h-70 rounded-full overflow-hidden mb-6">
+            <Image
+              src="/Pasted_image.png"
+              alt="ShivaKumar Ummeda"
+              width={200}
+              height={200}
+              className="object-cover md:mt-[-25px] mt-[-15px]"
+              priority
+            />
           </div>
+
+          {/* Heading */}
+          <h1
+            className={`text-2xl sm:text-3xl md:text-5xl font-bold text-orange-100 mb-4 text-center ${nunito.className}`}
+          >
+            Hie <span className="wave-hand">👋</span>, I&apos;m{" "}
+            <span className="gradient-flex">ShivaKumar Ummeda</span>
+          </h1>
+
+          {/* Typing Effect */}
+          <p
+            className={`text-lg sm:text-xl md:text-3xl text-orange-100 mb-6 text-center ${barlowCondensed.className}`}
+          >
+            <span className="text-orange-400">{phrases[index].article}&nbsp;</span>
+            {phrases[index].role.substring(0, subIndex)}
+            <span className="animate-pulse">|</span>
+          </p>
+
+          {/* Subtext */}
+          <p
+            className={`text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl text-center mx-auto mb-6 ${eduHand.className}`}
+          >
+            Passionate about creating innovative web solutions and turning ideas into
+            reality through code.
+          </p>
+
+          {/* Social Links */}
+          <div className="flex gap-6 justify-center text-lg sm:text-xl md:text-2xl mb-6">
+            <a
+              href="https://github.com/ShivakumarU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-400 transition transform hover:-translate-y-1 hover:rotate-12 text-amber-100"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shivakumarummeda29/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-400 transition transform hover:-translate-y-1 hover:rotate-12 text-amber-100"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.instagram.com/trendie_calligraphie/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-400 transition transform hover:-translate-y-1 hover:rotate-12 text-amber-100"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="mailto:ummedashivakumar@gmail.com"
+              className="hover:text-orange-400 transition transform hover:-translate-y-1 hover:rotate-12 text-amber-100"
+            >
+              <FaEnvelope />
+            </a>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+            <ResumeModal />
+            <Link
+              href="#contact"
+              className="flex items-center gap-2 bg-gradient-to-r from-purple-900 via-pink-700 to-orange-800 text-orange-100 px-5 py-2 rounded-lg font-medium hover:from-purple-900 hover:via-purple-900 hover:to-pink-700 hover:text-gray-100 transition text-xs md:text-base"
+            >
+              Get In Touch <FaLocationArrow className="text-sm md:text-lg leftRight" />
+            </Link>
+          </div>
+
+          {/* Flag */}
           <Image
-                src="/india-450_256.gif"
-                alt="Indian Flag"
-                width={32}
-                height={32}
-                title="I'm from India"
-                className="hidden md:block absolute top-32 right-10 w-16 h-auto animate-pulse"
-                />
+            src="/india-450_256.gif"
+            alt="Indian Flag"
+            width={64}
+            height={64}
+            className="hidden md:block absolute top-20 right-10 w-14 h-auto animate-pulse"
+          />
       </section>
+
 
       {/* Skills Section */}
        <Skills />

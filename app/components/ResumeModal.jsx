@@ -20,7 +20,7 @@ export default function ResumeModal() {
     <>
       <button
         onClick={() => setShowModal(true)}
-        className="w-fit flex items-center justify-center gap-2 bg-gradient-to-r from-orange-700 via-pink-700 to-purple-900 hover:from-purple-900 hover:to-orange-700 hover:via-pink-700 text-orange-50 hover:text-white md:px-4.5 md:py-2.5 px-3 py-1.5 rounded-lg md:font-medium transition-colors duration-200 md:text-lg text-sm"
+        className="flex items-center gap-2 bg-gradient-to-r from-orange-700 via-pink-700 to-purple-900 hover:from-purple-900 hover:to-orange-700 hover:via-pink-700 text-orange-50 hover:text-white px-5 py-2 rounded-lg md:font-medium transition-colors duration-200 text-xs md:text-base"
       >
         Download Resume <MdFileDownload className="md:text-lg text-sm upDown" />
       </button>
