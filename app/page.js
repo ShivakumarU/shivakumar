@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import { useState, useEffect } from 'react';
 import { Roboto, Playfair_Display, Pacifico, Edu_NSW_ACT_Foundation, Barlow_Condensed, Nunito, Rubik } from 'next/font/google';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaReact, FaNodeJs, FaJava, FaDocker, FaGitAlt, FaExternalLinkAlt, } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaReact, FaNodeJs, FaJava, FaDocker, FaGitAlt, FaExternalLinkAlt, FaTimesCircle, } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa6";
 import Link from 'next/link';
 import ResumeModal from "./components/ResumeModal";
@@ -79,13 +79,13 @@ export default function Home() {
       >
           {/* Dismissable Banner */}
           {isVisible && (
-            <div className="fixed top-20 md:left-1/5 left-1/2 -translate-x-1/2 bg-amber-900 text-orange-100 rounded-xl px-2 text-[9px] sm:text-xs md:text-md flex items-center gap-1 shadow-lg w-fit">
+            <div className="fixed top-20 md:left-1/5 left-1/2 -translate-x-1/2 bg-amber-900 text-orange-100 rounded-xl px-2 py-[3px] text-[9px] sm:text-xs md:text-md flex items-center gap-1 shadow-lg w-fit">
               <span>🙏 Welcome to My Portfolio</span>
               <button
                 onClick={() => setIsVisible(false)}
                 className="text-orange-200 hover:text-gray-200 font-bold ml-2 cursor-pointer"
               >
-                ✕
+                <FaTimesCircle />
               </button>
             </div>
           )}
