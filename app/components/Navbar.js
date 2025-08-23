@@ -8,7 +8,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
 
   const navItems = [
-    { name: 'About Me', href: '#home' },
+    { name: 'About Me', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact Me', href: '#contact' },
@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center md:h-16 h-14">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="#home" className="flex items-center">
             <span className="md:text-2xl text-md font-bold text-orange-200">
               🔱 Shiva<span className="text-red-500 ml-2">.</span>
             </span>

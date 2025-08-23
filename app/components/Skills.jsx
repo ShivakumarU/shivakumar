@@ -12,7 +12,7 @@ import {
   SiSocketdotio, SiRedis, SiMysql, SiGithub, SiGit, SiJira, 
   SiBitbucket, SiPostman
 } from 'react-icons/si';
-import { nunito } from '../page';
+import { nunito } from './About';
 
 export default function Skills() {
   const [hoveredSkill, setHoveredSkill] = useState(null);

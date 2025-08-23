@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { rubik } from '../page';
+import { rubik } from './About';
 
 export default function Projects() {
   const projects = [
