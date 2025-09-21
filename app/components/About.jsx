@@ -82,7 +82,7 @@ export default function About(){
             )}
 
             {/* Profile Image */}
-            <div className="w-28 h-40 sm:w-36 sm:h-56 md:w-40 md:h-64 lg:w-44 lg:h-70 rounded-full overflow-hidden mb-6">
+            <div className="w-28 h-40 sm:w-36 sm:h-56 md:w-40 md:h-60 lg:w-40 lg:h-60 rounded-full overflow-hidden mb-6 lg:mt-6">
               <Image
                 src="/Pasted_image.png"
                 alt="ShivaKumar Ummeda"
@@ -95,7 +95,7 @@ export default function About(){
 
             {/* Heading */}
             <h1
-              className={`text-2xl sm:text-3xl md:text-5xl font-bold text-orange-100 mb-4 text-center ${nunito.className}`}
+              className={`text-2xl sm:text-3xl md:text-4xl font-bold text-orange-100 mb-4 text-center ${nunito.className}`}
             >
               Hie <span className="wave-hand">👋</span>, I&apos;m{" "}
               <span className="gradient-flex">ShivaKumar Ummeda</span>
@@ -103,7 +103,7 @@ export default function About(){
 
             {/* Typing Effect */}
             <p
-              className={`text-lg sm:text-xl md:text-3xl text-orange-100 mb-6 text-center ${barlowCondensed.className}`}
+              className={`text-lg sm:text-xl md:text-2xl text-orange-100 mb-6 text-center ${barlowCondensed.className}`}
             >
               <span className="text-orange-400">{phrases[index].article}&nbsp;</span>
               {phrases[index].role.substring(0, subIndex)}
@@ -112,14 +112,14 @@ export default function About(){
 
             {/* Subtext */}
             <p
-              className={`text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl text-center mx-auto mb-6 ${eduHand.className}`}
+              className={`text-sm sm:text-base md:text-md text-gray-400 max-w-2xl text-center mx-auto mb-6 ${eduHand.className}`}
             >
               Passionate about creating innovative web solutions and turning ideas into
               reality through code.
             </p>
 
             {/* Social Links */}
-            <div className="flex gap-6 justify-center text-lg sm:text-xl md:text-2xl mb-6">
+            <div className="flex gap-6 justify-center text-lg sm:text-xl md:text-xl mb-6">
               <a
                 href="https://github.com/ShivakumarU"
                 target="_blank"

@@ -4,7 +4,7 @@ import { MdFileDownload } from "react-icons/md";
 export default function ResumeModal() {
   const [showModal, setShowModal] = useState(false);
   const fileName = "Shivakumar_Ummeda_Resume.pdf";
-  const filePath = "/Shivakumar_Ummeda_SoftwareEngineer_Resume_2025.pdf";
+  const filePath = "/Shivakumar_Ummeda_Resume_Latest.pdf";
 
   const triggerDownload = () => {
     const link = document.createElement("a");

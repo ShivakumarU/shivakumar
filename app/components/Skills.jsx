@@ -126,7 +126,7 @@ export default function Skills() {
       </AnimatePresence>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <h2 className={`md:text-5xl text-xl font-bold text-center text-orange-300 mb-15 ${nunito.className}`}>
+        <h2 className={`md:text-3xl text-xl font-bold text-center text-orange-300 mb-15 ${nunito.className}`}>
           Skills and Technologies
         </h2>
 
@@ -134,7 +134,7 @@ export default function Skills() {
           {categories.map((category, i) => (
             <motion.div
               key={category.title}
-              className="rounded-2xl p-6 border-2 border-amber-400 shadow-[1px_1px_5px_rgba(255,191,129,0.8)] bg-black/30 backdrop-blur-sm"
+              className="rounded-2xl p-4 border-2 border-amber-400 shadow-[1px_1px_5px_rgba(255,191,129,0.8)] bg-black/30 backdrop-blur-sm"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -151,7 +151,7 @@ export default function Skills() {
                 delay: i * 0.3
               }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-center text-amber-400">
+              <h3 className="text-md font-semibold mb-4 text-center text-amber-400">
                 {category.title}
               </h3>
 
@@ -159,12 +159,12 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="text-md flex items-center text-center space-x-2 bg-black/70 rounded-lg p-3 hover:bg-gray-900 transition-colors border border-amber-400/60 duration-200 shadow-[0px_1px_3px_rgba(255,255,255,0.25)] cursor-pointer"
+                    className="text-sm flex items-center text-center space-x-2 bg-black/70 rounded-lg py-2 px-3 hover:bg-gray-900 transition-colors border border-amber-400/60 duration-200 shadow-[0px_1px_3px_rgba(255,255,255,0.25)] cursor-pointer"
                     onMouseEnter={() => setHoveredSkill(skill)}
                     onMouseLeave={() => setHoveredSkill(null)}
                   >
-                    <skill.Icon color={skill.color} className="text-xl md:text-2xl" />
-                    <span className="text-white text-sm font-medium">
+                    <skill.Icon color={skill.color} className="text-lg md:text-xl" />
+                    <span className="text-white text-[12px] font-medium">
                       {skill.name}
                     </span>
                   </div>

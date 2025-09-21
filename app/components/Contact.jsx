@@ -41,21 +41,21 @@ const Contact = () => {
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
         {/* Left Side: Title & Contact Info */}
         <div className="text-center md:text-left space-y-6">
-          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
+          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
             Let&apos;s Connect !
           </h2>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-md">
             I&apos;m always excited to collaborate on <span className="text-cyan-400 font-semibold">innovative projects</span> and connect with amazing people.  
             Drop your details for updates, tips, and more!
           </p>
           {/* Contact Info */}
-          <div className="flex flex-col flex-col items-left gap-4 text-gray-300 font-bold mt-4 text-2xl">
+          <div className="flex flex-col flex-col items-left gap-4 mt-4 text-lg text-cyan-200">
             <div className="flex items-center gap-4">
-                <FiPhone className="text-cyan-400" size={28} />
+                <FiPhone className="text-cyan-400" size={24} />
                 <span>+91 94945 58983</span>
             </div>
-            <div className="flex items-center gap-4 text-xl">
-                <FaEnvelope className="text-cyan-400" size={28} />
+            <div className="flex items-center gap-4">
+                <FaEnvelope className="text-cyan-400" size={24} />
                 <span>ummedashivakumar@gmail.com</span>
             </div>
           </div>
