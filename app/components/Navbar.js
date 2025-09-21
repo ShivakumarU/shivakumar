@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center md:h-16 h-14">
           {/* Logo */}
           <Link href="#home" className="flex items-center">
-            <span className="md:text-2xl text-md font-bold text-orange-400">
+            <span className="md:text-xl text-md font-bold text-orange-400">
               Shiva<span className="text-green-400 ml-1">.</span>
             </span>
           </Link>

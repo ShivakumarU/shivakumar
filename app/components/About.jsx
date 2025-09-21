@@ -82,13 +82,13 @@ export default function About(){
             )}
 
             {/* Profile Image */}
-            <div className="w-28 h-40 sm:w-36 sm:h-56 md:w-40 md:h-60 lg:w-40 lg:h-60 rounded-full overflow-hidden mb-6 lg:mt-6">
+            <div className="w-28 h-40 sm:w-36 sm:h-56 md:w-36 md:h-60 rounded-full overflow-hidden mb-6 lg:mt-12">
               <Image
                 src="/Pasted_image.png"
                 alt="ShivaKumar Ummeda"
                 width={200}
                 height={200}
-                className="object-cover md:mt-[-25px] mt-[-15px]"
+                className="object-cover md:mt-[-20px] mt-[-15px]"
                 priority
               />
             </div>
