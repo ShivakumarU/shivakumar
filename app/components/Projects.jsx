@@ -53,7 +53,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-900 to-black py-24 px-6"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black py-28 px-6"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Title */}
@@ -61,7 +61,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-3xl font-bold text-center bg-gradient-to-r from-gray-300 via-gray-400 to-gray-300 bg-clip-text text-transparent mb-10"
+            className="text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-gray-300 via-gray-400 to-gray-300 bg-clip-text text-transparent mb-10"
             >
             See All My Projects
         </motion.h2>
@@ -82,7 +82,7 @@ export default function Projects() {
               className="bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden flex flex-col cursor-pointer transition-transform duration-300 border-2 border-cyan-400"
             >
               {/* Project Screenshot */}
-              <div className="relative w-full h-48 md:h-56 overflow-hidden rounded-t-3xl">
+              <div className="align-center relative w-[95%] h-40 overflow-hidden rounded-t-3xl">
                 <img
                   src={project.imgSrc}
                   alt={project.title}
@@ -95,8 +95,8 @@ export default function Projects() {
 
               {/* Project Info */}
               <div className="p-6 flex flex-col">
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-2">{project.title}</h3>
-                <p className={`text-gray-300 mb-4 leading-relaxed ${rubik.className}`}>
+                <h3 className="text-md font-semibold text-cyan-400 mb-2">{project.title}</h3>
+                <p className={`text-sm text-gray-300 mb-4 leading-relaxed ${rubik.className}`}>
                   {project.description}
                 </p>
                 <p className="text-sm text-green-400 font-medium mb-4">{project.tech}</p>

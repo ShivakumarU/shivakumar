@@ -66,20 +66,8 @@ export default function About(){
   return(
   <section
           id="about"
-          className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black via-gray-900 px-4 sm:px-6 lg:px-8 relative"
+          className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br to-gray-900 from-black px-4 sm:px-6 lg:px-8 relative"
         >
-            {/* Dismissable Banner */}
-            {isVisible && (
-              <div className="fixed top-20 md:left-1/5 left-1/2 -translate-x-1/2 bg-amber-900 text-orange-100 rounded-xl px-2 py-[3px] text-[9px] sm:text-xs md:text-md flex items-center gap-1 shadow-lg w-fit">
-                <span>🙏 Welcome to My Portfolio</span>
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="text-orange-200 hover:text-gray-200 font-bold ml-2 cursor-pointer"
-                >
-                  <FaTimesCircle />
-                </button>
-              </div>
-            )}
 
             {/* Profile Image */}
             <div className="w-28 h-40 sm:w-36 sm:h-56 md:w-36 md:h-60 rounded-full overflow-hidden mb-6 lg:mt-12">
@@ -95,15 +83,15 @@ export default function About(){
 
             {/* Heading */}
             <h1
-              className={`text-2xl sm:text-3xl md:text-4xl font-bold text-orange-100 mb-4 text-center ${nunito.className}`}
+              className={`text-xl sm:text-2xl md:text-3xl font-bold text-orange-400 mb-4 text-center ${nunito.className}`}
             >
               Hie <span className="wave-hand">👋</span>, I&apos;m{" "}
-              <span className="gradient-flex">ShivaKumar Ummeda</span>
+              <span className='text-indigo-100 text-2xl sm:text-3xl md:text-4xl md:ml-1'>ShivaKumar Ummeda</span>
             </h1>
 
             {/* Typing Effect */}
             <p
-              className={`text-lg sm:text-xl md:text-2xl text-orange-100 mb-6 text-center ${barlowCondensed.className}`}
+              className={`text-lg sm:text-xl md:text-xl text-orange-100 mb-6 text-center ${barlowCondensed.className}`}
             >
               <span className="text-orange-400">{phrases[index].article}&nbsp;</span>
               {phrases[index].role.substring(0, subIndex)}
@@ -112,7 +100,7 @@ export default function About(){
 
             {/* Subtext */}
             <p
-              className={`text-sm sm:text-base md:text-md text-gray-400 max-w-2xl text-center mx-auto mb-6 ${eduHand.className}`}
+              className={`text-sm sm:text-base md:text-sm text-gray-300 max-w-2xl text-center mx-auto mb-6 ${eduHand.className}`}
             >
               Passionate about creating innovative web solutions and turning ideas into
               reality through code.
@@ -157,7 +145,7 @@ export default function About(){
               <ResumeModal />
               <Link
                 href="#contact"
-                className="flex items-center gap-2 bg-gradient-to-r from-purple-900 via-pink-700 to-orange-800 text-orange-100 px-5 py-2 rounded-lg font-medium hover:from-purple-900 hover:via-purple-900 hover:to-pink-700 hover:text-gray-100 transition text-xs md:text-base"
+                className="flex items-center gap-2 border-1 px-5 py-2 rounded-lg font-medium hover:text-orange-400 hover:bg-gray-900 transition text-xs md:text-base"
               >
                 Get In Touch <FaLocationArrow className="text-sm md:text-lg leftRight" />
               </Link>

@@ -32,13 +32,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-gray-900 fixed w-full top-0 z-50 border-b-[0.1px] border-gray-500 shadow-[0px_1px_10px_rgba(255,255,255,0.4)]">
+    <nav className="bg-black fixed w-full top-0 z-50 border-b-[0.1px] border-gray-500 shadow-[0px_1px_5px_rgba(255,255,255,0.4)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center md:h-16 h-14">
+        <div className="flex justify-between items-center md:h-14 h-14">
           {/* Logo */}
           <Link href="#home" className="flex items-center">
-            <span className="md:text-xl text-md font-bold text-orange-400">
-              Shiva<span className="text-green-400 ml-1">.</span>
+            <span className="md:text-xl text-md font-bold gradient-flex">
+              Shiva<span className="text-gray-500 ml-1">.</span>
             </span>
           </Link>
 
@@ -49,11 +49,11 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200
+                  className={`relative px-3 py-1 rounded-md text-sm font-medium transition-colors duration-200
                     ${activeSection === item.href.replace('#', '')
                       ? "text-orange-400 before:w-full"
                       : "text-gray-100 hover:text-orange-400 before:w-0"}
-                    before:content-[''] before:absolute before:left-0 before:bottom-0 before:h-[2px] before:bg-orange-400 
+                    before:content-[''] before:absolute before:left-0 before:bottom-0 before:h-[1px] before:bg-orange-400 
                     before:transition-all before:duration-600 before:ease-out`}
                 >
                   {item.name}
